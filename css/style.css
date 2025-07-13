@@ -8,9 +8,7 @@
 
 }
 
-body {
-  overflow-x: hidden;
-}
+
 
 body, html {
   height: 100%;
@@ -623,6 +621,7 @@ textarea {
   }
 
   .grid {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
