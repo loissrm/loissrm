@@ -4,6 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+
+}
+
+body {
+  overflow-x: hidden;
 }
 
 body, html {
@@ -45,11 +51,13 @@ header {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #7D7D7D;
+  text-align: justify;
+
 }
 
 #particles-js {
   position: absolute;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   background-color: #2E2E2E;
   z-index: 0;
@@ -182,7 +190,7 @@ p {
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -229,6 +237,10 @@ p {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+.grid .card:hover .face.face1,
+.grid .card:hover .face.face2 {
+  transform: none !important;
+}
 
 .grid .card .face.face1 .content {
   opacity: 0.7;
@@ -244,6 +256,7 @@ p {
 }
 
 .grid .card .face.face1 .content h3 {
+
   margin: 10px 0 0;
   padding: 0;
   color: #2E2E2E;
@@ -255,7 +268,7 @@ p {
   margin: 10px 10px 20px;
   padding: 0;
   font-size: 1em;
-  text-align: center; 
+  text-align: justify; 
   color: #7D7D7D;
 }
 
@@ -493,33 +506,69 @@ textarea {
 
 /* Tablets (768px a 1024px) */
 @media (max-width: 1024px) {
+
+  .content h1{
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+
+  .content p{
+    font-size: 1.5rem;
+  }
+
+  .imagenPersonal {
+    width: 300px;
+  }
+
+  #about h2{
+    font-size: 2.5rem;
+  }
+  
   .informacion h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   .informacion p {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    text-align: justify;
   }
 
   .social-icons a {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .grid .card .face {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
+
+
+
 
   .grid {
     padding: 1rem;
   }
 
+  .navbar {
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #2E2E2E;
+  }
+
   .navbar ul {
-    gap: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .navbar li a {
-    font-size: 14px;
+    font-size: 15px;
+    padding: 10px;
+    flex-shrink: 0;
   }
 }
 
@@ -536,6 +585,8 @@ textarea {
   }
 
   .informacion p {
+    margin-left: 50px;
+    margin-right: 50px;
     font-size: 1.5rem;
   }
 
@@ -609,6 +660,32 @@ textarea {
     height: auto;
   }
 
+  .grid .card .face.face1 .content img {
+    max-width: 80px;
+  }
+
+  .grid .card .face.face1 .content h3 {
+    font-size: 1.2em;
+  }
+
+  .grid .card .face.face1 .content p {
+    font-size: 0.95em;
+  }
+
+  .grid .card .face.face2 .icons i,
+  .grid .card .face.face2 .icons img {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .grid .card .face.face2 .content a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+
+  
   .contacto {
     padding: 20px 15px;
   }
