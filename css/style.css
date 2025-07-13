@@ -616,30 +616,7 @@ textarea {
     width: 200px;
   }
 
-  .navbar {
-    width: 100%;
-    padding: 15px 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    overflow-x: auto;
-    white-space: nowrap;
-    background: #2E2E2E;
-  }
-
-  .navbar ul {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .navbar li a {
-    font-size: 15px;
-    padding: 10px;
-    flex-shrink: 0;
-  }
+  
   .scroll-arrow {
     font-size: 2rem;
     margin-top: 40px;
