@@ -690,22 +690,26 @@ textarea {
     transform: none !important;
   }
 
-  .grid .card:focus .face.face1 {
-  background: #e5e9eb;
-  transform: translateY(0);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
+ .grid .card.active .face.face1 {
+    background: #e5e9eb;
+    transform: translateY(0);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 
-.grid .card:focus .face.face2 {
-  transform: translateY(-80px);
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
+  .grid .card.active .face.face2 {
+    transform: translateY(-80px);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .grid .card.active .face.face1 .content {
+    opacity: 1;
+  }
   
   .contacto {
     padding: 20px 15px;
