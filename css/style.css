@@ -177,6 +177,8 @@ p {
   animation: bounce 2s infinite;
   margin-top: 20px;
 }
+
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -676,7 +678,7 @@ textarea {
   }
 
   .grid .card.active .face.face2 {
-    transform: translateY(-80px);
+    transform: translateY(-110px);
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 20px;
