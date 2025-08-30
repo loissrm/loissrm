@@ -4,55 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-    body, html {
-      margin: 0;
-      padding: 0;
+    <link rel="stylesheet" href="css/styleProyectos.css">
     
-    }
-
-    .lottie-fullscreen-container {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#sobremi">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="index.html#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#sobremi">Sobre mí</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+  </nav>
 
-   <div class="lottie-fullscreen-container">
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
-      type="module"
-    ></script>
+  <div class="espacioEnBlanco">
 
-    <dotlottie-wc
-      src="https://lottie.host/294f885b-d215-4c9c-bbf0-964c0007c49e/ZBZbe31mSh.lottie"
-      style="width: 100%; max-width: 600px; height: auto;"
-      speed="1"
-      autoplay
-      loop
-    ></dotlottie-wc>
   </div>
+  <main>
+    <section class="cards-wrapper">
+    <a class="card" href="https://github.com/a23loisrm/DAM_UF1_Proyecto/tree/master/DAM_UF1_Proyecto" style="background-image: url('img/AudiHub.png');">
+      <div class="date" data-date="2024-12-08">8 Dic 2024</div>
+      <div class="content">
+        <div class="info">
+          <h1>AudiHub</h1>
+          <p>Otro proyecto destacado.</p>
+        </div>
+        <div class="tags">
+          <span class="tag">Android Studio</span>
+          <span class="tag">Kotlin</span>
+        </div>
+      </div>
+    </a>
+    
+    <a class="card" href="https://github.com/a23loisrm/DAM_UF2_Proyecto.git" style="background-image: url('img/FrogJumping.png');">
+      <div class="date" data-date="2025-03-12">12 Mar 2025</div>
+      <div class="content">
+        <div class="info">
+          <h1>Frog Jumping</h1>
+          <p>Es un juego interactivo desarrollado en Unity, bla bla bla...</p>
+        </div>
+        <div class="tags">
+          <span class="tag">UNITY</span>
+        </div>
+      </div>
+    </a>
 
+    <a class="card" style="background-image: url('img/Portfolio.png');">
+      <div class="date" data-date="2025-08-01">Ago 2025</div>
+      <div class="content">
+        <div class="info">
+          <h1>Portfolio</h1>
+          <p>Otro proyecto destacado.</p>
+        </div>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+    </a>
+  </section>
 
-<footer class="footer">
-  <div class="footer-container">
-    <p>© 2025 Lois Rodríguez Moimenta. Todos los derechos reservados.</p>
-  </div>
-</footer>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2025 Lois Rodríguez Moimenta. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
 </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const wrapper = document.querySelector(".cards-wrapper");
+      const cards = Array.from(wrapper.querySelectorAll(".card"));
+
+      cards.sort((a, b) => {
+        const dateA = new Date(a.querySelector(".date").dataset.date);
+        const dateB = new Date(b.querySelector(".date").dataset.date);
+        return dateB - dateA; // esto es para que vaya el mas reciente primero
+      });
+
+      cards.forEach(card => wrapper.appendChild(card));
+    });
+  </script>
 </html>
